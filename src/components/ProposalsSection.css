@@ -1,0 +1,106 @@
+/* src/components/ProposalsSection.css */
+
+.proposals-section {
+    position: relative;
+    padding: 3rem 2rem;
+    background: url('../images/bg-segunda-sessao.png') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .proposals-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .proposals-subtitle {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  /* Container dos cards */
+  .proposals-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  /* Card */
+  .proposal-card {
+    width: 240px; 
+    height: 340px; /* Ajuste a altura para caber tudo */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+  
+    /* Alinha itens verticalmente, 
+       empurrando o botão para baixo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .proposal-image {
+    width: 250px; /* Aumentada para 120px */
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  /* Título e texto */
+  .proposal-card h3 {
+    margin: 0.5rem 0 0.3rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .proposal-card p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ddd;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Barra fina entre o texto e o botão */
+  .proposal-divider {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 2px;
+    width: 80%;
+    margin: 0.5rem 0;
+    border: none;
+  }
+  
+  /* Link "Como fazer?" */
+  .proposal-link {
+    display: inline-block;
+    background: #410486;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .proposal-link:hover {
+    background: #5901c2;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .proposal-card {
+      width: 100%;
+      height: 300px;
+    }
+    .proposal-image {
+      width: 200px;
+    }
+  }
+  

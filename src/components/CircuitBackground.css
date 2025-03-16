@@ -1,0 +1,58 @@
+/* src/components/CircuitBackground.css */
+
+/* Container do circuito */
+.circuit-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0F0F2F; /* fundo escuro */
+    z-index: 0; /* fica atrás do conteúdo */
+    overflow: hidden;
+  }
+  
+  /* Ajusta o SVG para ocupar todo o espaço */
+  .circuit-background svg {
+    width: 100%;
+    height: 100%;
+  
+    /* Faz um leve movimento de "flutuação" */
+    animation: floatCircuit 25s linear infinite alternate;
+  }
+  
+  /* Animação para mover todo o circuito lentamente */
+  @keyframes floatCircuit {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-20px, 20px); }
+  }
+  
+  /* Estilo das linhas do circuito */
+  .circuit-line {
+    fill: none; 
+    stroke: url(#lineGradient); /* usa o gradiente linear definido no <defs> */
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.8;
+    animation: linePulse 5s ease-in-out infinite;
+  }
+  
+  /* Animação sutil para pulsar a opacidade das linhas */
+  @keyframes linePulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+  }
+  
+  /* Nós (pontos) do circuito */
+  .circuit-node {
+    fill: url(#nodeGradient); /* gradiente radial para dar glow */
+    animation: nodePulse 3s ease-in-out infinite;
+  }
+  
+  /* Animação para pulsar o raio dos nós */
+  @keyframes nodePulse {
+    0%, 100% { r: 6; }
+    50% { r: 8; }
+  }
+  

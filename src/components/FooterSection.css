@@ -1,0 +1,122 @@
+/* src/components/FooterSection.css */
+
+/* Parte geral do rodapé */
+.footer-section {
+    background-color: #0F0F2F; /* Fundo escuro */
+    color: #fff;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  .footer-col {
+    flex: 1; 
+    min-width: 200px;
+  }
+  
+  .footer-sapientia-logo {
+    width: 140px; /* Ajuste conforme desejar */
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-col h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .footer-col p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0.5rem 0;
+  }
+  
+  .footer-phone {
+    margin-top: 0.5rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .footer-col ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Linha divisória entre a parte superior e inferior */
+  .footer-divider {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 1px solid #333;
+  }
+  
+  /* Parte inferior do rodapé */
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-copy {
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+  
+  .footer-legal-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .footer-legal-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+
+
+      
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .footer-col {
+      margin-bottom: 2rem;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,156 @@
+/* src/components/SecondSection.css */
+
+.second-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ajuste conforme desejar */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .titulo-section{
+    max-width: 1200px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .second-section-content {
+    max-width: 1200px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  .second-section-content h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    /* Se desejar aplicar efeito de digitação, adicione a classe "typewriter" no JSX */
+  }
+  
+  /* Container dos cards */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* Cada card: centraliza ícone, texto e posiciona o botão na parte inferior */
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Botão sempre no final */
+    align-items: center;            /* Centraliza ícone e texto */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: growIn 1s forwards; /* Efeito de entrada: cresce do menor para o tamanho normal */
+    overflow-wrap: break-word;
+  }
+  
+  .card p {
+    margin: 1rem 0;
+  }
+  
+  /* Ícone do card */
+  .card-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  /* Botão "SAIBA MAIS" - seguindo as definições do App.css */
+  .btn-saiba-mais {
+    background: linear-gradient(45deg, #410486, #0b044b);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    margin-top: auto; /* Garante que o botão fique sempre no final do card */
+  }
+  
+  .btn-saiba-mais:hover {
+    background: rgb(38, 22, 252);
+  }
+  
+  /* Hover no card: leve aumento e sombra */
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Animação de entrada para os cards (growIn) */
+  @keyframes growIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Contador (extensão) - animação para crescer e subir */
+  .extension-hours h2 {
+    font-size: 3rem; /* Texto maior */
+    margin-top: 2rem;
+    line-height: 1.3;
+    opacity: 0;
+    animation: growAndRise 1s forwards;
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes growAndRise {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  /* Responsividade para telas até 768px */
+  @media (max-width: 768px) {
+    .second-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+    
+    .second-section-content h2 {
+      width: 100%;
+      max-width: 400px;
+      font-size: 1rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+  
+    
+    .card {
+      width: 80%;
+      margin: 1em auto;
+      align-items: center;
+      
+    }
+  }

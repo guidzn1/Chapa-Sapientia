@@ -1,38 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+
+body {
+  font-family: 'Azeret Mono', monospace;
+  background: #0F0F2F;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container principal */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Azeret Mono', monospace; /* Fonte desejada */
+  color: #fff;
+  background: #0F0F2F;
+}
+
+/* Classe para aplicar efeito de digitação */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid orange;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+/* Header */
+.main-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  padding: 0.5rem 2em;
+  margin-bottom: 0;
+  text-align: center;
+  animation: growIn 1s ease-out forwards;
+}
+.header-logo {
+  width: 160px;     
+  height: auto;
+}
+.nav-container {
+  display: flex;                   
+  justify-content: space-between;  
+  align-items: center;             
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 0.5rem 3rem;
+  width: 80%; 
+  max-width: 1000px;
+}
+.vote-icon {
+  width: 30px;      
+  height: auto;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.header-left {
+
+  display: flex;
+  align-items: center;
+  animation: growIn 1s ease-out forwards;
+}
+a {
+  text-decoration: none;
+}
+.header-right ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  animation: growIn 1s ease-out forwards;
+}
+.header-right a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-contato {
+  background: rgb(53, 9, 212);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+/* Ajuste a lista */
+.nav-container ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 1em;
+}
+.nav-container a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 60px);
+  padding: 1rem 2rem;
+  margin-top: 0; /* Garanta que não haja margin-top extra */
+}
+.hero-left {  
+  margin-left: 14em;
+  margin-right: 1em;
+  width: 60%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  animation: growIn 1s ease-out forwards;
+}
+.hero-left p {
+  max-width: 650px;
+  line-height: 1.5;
+}
+.hero-logo {
+  width: 600px;
+  margin-left: 0;
+  animation: growIn 1s ease-out forwards;
+}
+.desktop-menu {
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hamburger-icon {
+  width: 30px;
+  height: auto;
+}
+
+/* Menu mobile */
+.mobile-menu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  position: absolute;
+  top: 100%; /* Imediatamente abaixo do header */
+  right: 0;
+  width: 200px;
+  border-radius: 0 0 0 10px;
+}
+
+.mobile-menu li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #444;
+}
+
+.mobile-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Media query para mobile */
+@media (max-width: 768px) {
+  .main-header{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-logo{
+    display: none;
+  }
+  .desktop-menu {
+    display: none;
+  }
+  .header-link{
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
+/* Botão "VOTE AGORA" */
+.btn-vote {
+  align-self: flex-start;
+  background: linear-gradient(45deg, #410486, #0b044b);
+  background-size: 200% 200%;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  animation: gradientShift 5s ease infinite;
+}
+.btn-vote:hover {
+  background: rgb(38, 22, 252);
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hero Right */
+.hero-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: growIn 1s ease-out forwards;
+}
+.icon-container {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.icon-container:hover {
+  transform: scale(1.2);
+}
+.big-icon {
+  margin-right: 20em;
+  width: 400px;
+  max-width: 100%;
+  animation: slowRotate 20s linear infinite;
+}
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ==============================
+   ANIMAÇÕES ADICIONAIS
+============================== */
+
+/* Efeito para o ícone aparecer (fade in com scale) */
+.icon-appear {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 1s forwards;
+}
+@keyframes fadeInScale {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ==============================
+   ANIMAÇÕES DE ENTRADA PERSONALIZADAS - GROW IN
+============================== */
+@keyframes growIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ==============================
+   FIM DAS ANIMAÇÕES ADICIONAIS
+============================== */
+/* ======================
+   MEDIA QUERY - MOBILE
+====================== */
+@media (max-width: 768px) {
+  /* Header Mobile: exibe a logo à esquerda e o ícone do menu (hamburger) à direita */
+  .nav-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 0.5rem 3rem;
+    /* Outras propriedades existentes */
+  }
+  /* Mantém a logo (header-left) */
+  .header-left {
+    display: none;
+  }
+  .header-right{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 0.2rem;
+  }
+  .header-link{
+    display: flex;
+    text-align: center;
+
+  }
+  /* Oculta os links do menu desktop */
+  .header-right ul {
+    font-size: 0.7rem; /* Aumenta ou diminui conforme a necessidade */
+    align-items: center;
+    display: flexbox;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-right: 2em;
+  }
+  .header-right a {
+  
+    align-items: center;
+    display: flexbox;
+    justify-content: center;
+    gap: 0.5rem;
+
+  }
+  /* Exibe o ícone de menu mobile */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger-icon {
+display: none;
+  }
+  
+  /* Se o menu mobile for renderizado via React (estado menuOpen), ele será posicionado normalmente; 
+     aqui não alteramos sua exibição, pois queremos que só apareça quando ativado */
+  
+  /* Hero Section Mobile: layout em coluna, centralizando todo o conteúdo e removendo o ícone giratório */
+  .hero-section {
+    padding: 0rem 2rem;
+    margin: 0; /* Certifique-se de que não haja margin extra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .hero-left {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .hero-left p {
+    max-width: 100%;
+  }
+  .hero-logo {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .hero-right {
+    display: none;
   }
 }
