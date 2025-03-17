@@ -104,12 +104,12 @@ function MainPage() {
             curso, sempre junto a uma comunidade engajada.
           </p>
           <a 
-            href="https://www.instagram.com/p/C9kdDu9pnw3/?img_index=1" 
+            href="https://forms.gle/5arBCqYSmA11jRZ77" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn-vote"
           >
-            <img src={VoteIcon} alt="Vote Icon" className="vote-icon" href="https://forms.gle/5arBCqYSmA11jRZ77" />
+            <img src={VoteIcon} alt="Vote Icon" className="vote-icon"  />
             VOTE AGORA
           </a>
         </div>
