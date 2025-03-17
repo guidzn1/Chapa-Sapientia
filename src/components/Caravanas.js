@@ -11,7 +11,7 @@ function Caravanas() {
       <header className="main-header">
         <div className="nav-container">
           <div className="header-left">
-            {/* Ao clicar na logo, volta para a/}
+            {/* Ao clicar na logo, volta para a página principal */}
             <Link to="/" className="header-logo-link">
               <img 
                 src={LogoSapientia} 
