@@ -26,6 +26,7 @@ import Caravanas from './components/Caravanas';
 import Comunicacao from './components/Comunicacao';
 import MelhoriaLab from './components/MelhoriaLab';
 import Mentoria from './components/Mentoria';
+import Transp from './components/Compromisso';
 
 function MainPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -143,6 +144,7 @@ function App() {
         <Route path="/comunicacao" element={<Comunicacao />} />
         <Route path="/melhorialab" element={<MelhoriaLab />} />
         <Route path="/mentoria" element={<Mentoria />} />
+        <Route path="/transp" element={<Transp/>} />
       </Routes>
     </Router>
   );

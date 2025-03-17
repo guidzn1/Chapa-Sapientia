@@ -1,0 +1,112 @@
+
+/* src/components/Comunicacao.css */
+
+.comunicacao-page {
+    background: url('../images/backtransp.png') no-repeat top center; /* Ajuste a imagem se houver, ou use uma cor de fundo */
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* HEADER – igual ao da página principal */
+  .main-header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2em;
+    margin-bottom: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 0.5rem 3rem;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-logo-link {
+    text-decoration: none;
+  }
+  
+  .header-logo {
+    width: 160px;
+    height: auto;
+  }
+  
+  .header-right ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .btn-contato {
+    background: rgb(53, 9, 212);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  /* Conteúdo principal */
+  .comunicacao-content {
+    flex: 1;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;  /* Texto centralizado */
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+  }
+  
+  .comunicacao-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .comunicacao-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #ccc;
+    text-align: center;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .comunicacao-content {
+      padding: 2rem 1rem;
+    }
+    .comunicacao-title {
+      font-size: 1.8rem;
+    }
+  }
+  

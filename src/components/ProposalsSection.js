@@ -10,6 +10,8 @@ import Proposta3 from '../images/proposta3.png';
 import Proposta4 from '../images/proposta4.png';
 // Imagem para a proposta de Mentoria Acadêmica (ajuste o nome do arquivo conforme necessário)
 import MentoriaImg from '../images/mentoria.png';
+import Proposta6 from '../images/proposta6.png';
+
 
 function ProposalsSection({ id }) {
   return (
@@ -82,6 +84,17 @@ function ProposalsSection({ id }) {
           </p>
           <div className="proposal-divider"></div>
           <Link to="/mentoria" className="proposal-link">
+            Como?
+          </Link>
+        </div>
+        <div className="proposal-card">
+          <img src={Proposta6} alt="Proposta Mentoria" className="proposal-image" />
+          <h3>Compromisso com a Transparência</h3>
+          <p>
+          Continuaremos divulgando e apoiando todas as iniciativas relevantes para o curso.
+          </p>
+          <div className="proposal-divider"></div>
+          <Link to="/transp" className="proposal-link">
             Como?
           </Link>
         </div>
