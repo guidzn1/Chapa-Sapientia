@@ -109,7 +109,7 @@ function MainPage() {
             rel="noopener noreferrer" 
             className="btn-vote"
           >
-            <img src={VoteIcon} alt="Vote Icon" className="vote-icon" />
+            <img src={VoteIcon} alt="Vote Icon" className="vote-icon" href="https://forms.gle/5arBCqYSmA11jRZ77" />
             VOTE AGORA
           </a>
         </div>
